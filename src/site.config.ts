@@ -14,7 +14,7 @@ export const APP_FULL_NAME = 'Astrocaptain – Kundli & Jyotish';
 export const DEVELOPER = 'Afterday';
 
 /** Shown on the privacy page and in the footer. Use the same address as on your Play Store listing. */
-export const CONTACT_EMAIL = 'support@example.com';
+export const CONTACT_EMAIL = 'afterdayy365@gmail.com';
 
 /** Date the privacy policy was last changed. */
 export const PRIVACY_UPDATED = '23 November 2026';
