@@ -1,0 +1,108 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --bg-primary: #0d0f14;
+  --bg-card: #151921;
+  --text-main: #fcfbfa;
+  --text-muted: #c2b8a8;
+  --accent: #c9a227;
+  --border-color: rgba(201, 162, 39, 0.2);
+}
+
+body.theme-light {
+  --bg-primary: #fcfbfa;
+  --bg-card: #f5f2ed;
+  --text-main: #151921;
+  --text-muted: #6b6357;
+  --accent: #1f6f4a;
+  --border-color: rgba(31, 111, 74, 0.2);
+}
+
+body.theme-softwhite {
+  --bg-primary: #f5f2ed;
+  --bg-card: #e6dfd5;
+  --text-main: #1f1a17;
+  --text-muted: #73685d;
+  --accent: #1f6f4a;
+  --border-color: rgba(31, 111, 74, 0.2);
+}
+
+body.theme-dark {
+  --bg-primary: #0d0f14;
+  --bg-card: #151921;
+  --text-main: #fcfbfa;
+  --text-muted: #c2b8a8;
+  --accent: #c9a227;
+  --border-color: rgba(201, 162, 39, 0.2);
+}
+
+body.theme-black {
+  --bg-primary: #000000;
+  --bg-card: #0a0a0a;
+  --text-main: #ffffff;
+  --text-muted: #a3a3a3;
+  --accent: #c9a227;
+  --border-color: rgba(201, 162, 39, 0.3);
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Inter Variable', system-ui, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+html { scroll-behavior: smooth; }
+
+.font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+/* Long-form text on the privacy page */
+.prose-page h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.75rem; font-weight: 600; margin: 2.5rem 0 0.75rem; }
+.prose-page p, .prose-page li { line-height: 1.75; opacity: 0.85; }
+.prose-page ul { list-style: disc; padding-left: 1.25rem; margin: 0.75rem 0; }
+.prose-page li { margin: 0.35rem 0; }
+.prose-page a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto; }
+}
